@@ -1,0 +1,26 @@
+.contenur_mufavorite{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+    background: #060d17;
+    min-height: 25.5rem;
+}
+.card_my_fav{
+    height: 21.5rem !important;
+}
+.button_my_fav{
+    width: 16rem !important;
+    margin-top: 0.5rem !important;
+}
+.message_list{
+    display: none;
+
+}
+.message_list.active{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 35%;
+    color: aliceblue;
+}

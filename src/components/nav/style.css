@@ -1,0 +1,43 @@
+
+.navv{
+    background: #060d17;
+   border-bottom: solid 1px rgb(77, 75, 75);
+   color: aliceblue;
+}
+.navv a{
+    /* color: aliceblue; */
+}
+Nav a{
+    font-size: 1.7rem;
+    /* color: aliceblue;   */
+}
+.mm{
+    font-size: 2rem;
+    color: aliceblue;
+    position: relative;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: aliceblue !important;
+}
+.navbar-light .navbar-brand{
+    color: aliceblue !important;
+}
+.numfav{
+    text-align: center;
+    z-index: 10;
+    position: absolute;
+    top: 1.8rem;
+    right: 1rem;
+    background-color: #060d17;
+    border-radius: 200%;
+    font-size: 0.7rem;
+    width: 0.9rem;
+    height: 0.9rem;
+}
+.logo_page{
+    border: 1px white solid;
+    padding: 0.5rem;
+    border-radius: 20px;
+    font-weight: 700;
+}
