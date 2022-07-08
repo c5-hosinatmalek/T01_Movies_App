@@ -10,11 +10,15 @@ import MYFAV from './components/myfav';
 import MAINMOVI from './components/main_movi';
 export const usecount=createContext()
 function App() {
-  const [countFav,setCountFav]=useState(JSON.parse(localStorage.getItem("fav")).length||0)
+  
   useEffect(()=>{
-    localStorage.setItem("fav",JSON.stringify([]))
+   
   },[])
   
+  if(localStorage.getItem("fav")===undefined){
+    localStorage.setItem("fav",JSON.stringify([]))
+  }
+  const [countFav,setCountFav]=useState(JSON.parse(localStorage.getItem("fav")).length)
   return (
     <div className="App">
        <usecount.Provider value={{countFav,setCountFav}} >
@@ -23,7 +27,7 @@ function App() {
    <Routes>
     <Route path='/' element={<MAINPAGE/>}/>
     <Route path='/my_favorite' element={<MYFAV/>}/>
-    <Route path='/main_movi/:id' element={<MAINMOVI/>} />
+    <Route path='/main_movi' element={<MAINMOVI/>} />
    </Routes>
    </usecount.Provider>
    <FOOTER/>

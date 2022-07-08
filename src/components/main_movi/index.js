@@ -22,13 +22,15 @@ function MAINMOVI() {
             movs:state.allmovie.onemovie
         }
     })
-    
+    console.log(mov.movs[0]+"mmmmmm");
   return (
+   mov.movs[0]!=undefined?
+
     <div className='contenur_slider' >
         
         <div className='right_box' >
             <div>
-                <h1>{mov.movs[0].original_title}</h1>
+                <h1>{mov.movs[0].original_title&&mov.movs[0].original_title}</h1>
 
             </div>
             <div><p>{mov.movs[0].overview}</p></div>
@@ -41,6 +43,7 @@ function MAINMOVI() {
         }} variant="primary" size="lg">
          Back to main page
         </Button>{' '}
+        
         <Button onClick={()=>{
            stClassName("active")
            dispatch(counterPlusFavList(1))
@@ -95,6 +98,7 @@ function MAINMOVI() {
       
     </Carousel>
     </div>
+    :<>mmmm</>
   );
 }
 

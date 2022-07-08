@@ -24,7 +24,7 @@ const MAINPAGE=()=> {
     dispatch(setAllmovie(result.data.results.slice(0,9+steppage)))
    
     })
-  })
+  },[])
   useEffect(() => {
   
     if (isLoading) {
@@ -59,7 +59,7 @@ const MAINPAGE=()=> {
         
         return( <Link key={index}  onClick={()=>{
           dispatch(setOneMovie(ele.id))
-        }} className='movislink' to={`/main_movi/${ele.id}`}>
+        }} className='movislink' to={`/main_movi`}>
         <Card style={{width:'18rem'}} >
         <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w370_and_h556_bestv2/"+ele.poster_path} />
         <Card.Body>
