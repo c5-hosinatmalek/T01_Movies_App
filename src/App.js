@@ -1,9 +1,9 @@
 import FOOTER from './components/footer';
-import { useEffect,createContext, useState } from 'react';
+import {createContext, useState } from 'react';
 import './App.css';
 import NAV from './components/nav';
 
-import { useDispatch } from 'react-redux/es/exports'; 
+
 import MAINPAGE from './components/main_page';
 import { Routes,Route } from 'react-router-dom';
 import MYFAV from './components/myfav';
@@ -11,7 +11,7 @@ import MAINMOVI from './components/main_movi';
 export const usecount=createContext()
 function App() {
   const [countFav,setCountFav]=useState(JSON.parse(localStorage.getItem("fav")).length)
-const dispatch=useDispatch()
+
   
   return (
     <div className="App">

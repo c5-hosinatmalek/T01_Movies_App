@@ -2,9 +2,7 @@ import React from 'react';
 import {
   MDBFooter,
   MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBIcon
+  
 } from 'mdb-react-ui-kit';
 import { BsFacebook } from 'react-icons/bs';
 import { AiFillInstagram } from 'react-icons/ai';

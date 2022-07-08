@@ -1,9 +1,9 @@
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
-import { useParams,useNavigate } from 'react-router-dom';
-import { useEffect, useState,useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useState,useContext } from 'react';
 import { useDispatch } from 'react-redux/es/exports';
-import { setOneMovie } from '../../redux/movie';
+
 import { useSelector } from 'react-redux/es/exports';
 import { addFav } from '../../redux/favorite';
 import Modal from 'react-bootstrap/Modal';
@@ -11,20 +11,18 @@ import { counterPlusFavList } from '../../redux/favorite';
 import './style.css'
 import { usecount } from '../../App';
 function MAINMOVI() {
-  const {countFav,setCountFav}=useContext(usecount)
+  const {setCountFav}=useContext(usecount)
     const navgate=useNavigate()
    const dispatch=useDispatch()
    const [className,stClassName]=useState("")
-    let {id}=useParams()
-    // useEffect(()=>{
-    //     dispatch(setOneMovie(id))
-    // },[])
+    
+    
     const mov=useSelector((state)=>{
         return{
             movs:state.allmovie.onemovie
         }
     })
-    console.log(mov.movs[0].poster_path);
+    
   return (
     <div className='contenur_slider' >
         

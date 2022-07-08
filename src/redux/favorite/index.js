@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { clear } from "@testing-library/user-event/dist/clear";
-import { usecount } from '../../App';
-import { useContext } from "react";
+
 const fav=createSlice({
     name:"mu_favorite",
     initialState:{
