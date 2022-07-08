@@ -10,15 +10,17 @@ import MYFAV from './components/myfav';
 import MAINMOVI from './components/main_movi';
 export const usecount=createContext()
 function App() {
-  
+ 
   useEffect(()=>{
    
   },[])
   
-  if(localStorage.getItem("fav")===undefined){
+  if(localStorage.getItem("fav")===null){
     localStorage.setItem("fav",JSON.stringify([]))
+    
   }
   const [countFav,setCountFav]=useState(JSON.parse(localStorage.getItem("fav")).length)
+  console.log(JSON.parse(localStorage.getItem("fav")));
   return (
     <div className="App">
        <usecount.Provider value={{countFav,setCountFav}} >
@@ -36,3 +38,4 @@ function App() {
 }
 
 export default App;
+// JSON.parse(localStorage.getItem("fav"))===undefined?0:JSON.parse(localStorage.getItem("fav")).length

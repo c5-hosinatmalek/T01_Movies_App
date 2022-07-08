@@ -70,7 +70,7 @@ function MAINMOVI() {
                   <Button onClick={()=>{ 
                     dispatch(addFav(mov.movs[0]))
                     stClassName("")
-                    setCountFav(JSON.parse(localStorage.getItem("fav")).length)
+                    setCountFav(JSON.parse(localStorage.getItem("fav")).length||0)
                 }
                     } variant="primary">OK</Button>
                 </Modal.Footer>
