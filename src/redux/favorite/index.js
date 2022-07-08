@@ -4,7 +4,7 @@ const fav=createSlice({
     name:"mu_favorite",
     initialState:{
         myfav:JSON.parse(localStorage.getItem("fav")),
-        numfav:JSON.parse(localStorage.getItem("fav")).length
+        numfav:0,
     },
     reducers:{
         addFav:(state,action)=>{
